@@ -1,0 +1,39 @@
+.like-vote {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 0 4px;
+}
+
+.like-vote p {
+    margin: 0;
+}
+
+.like-vote:hover {
+    background: #e51c23;
+}
+
+.like-vote:hover .like-count,
+.like-vote:hover .like-title,
+.like-vote:hover .like-message {
+    color: #fff;
+}
+
+.like-title {
+    color: #e51c23;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.like-count {
+    color: #e51c23;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.like-count span {
+    cursor: pointer;
+}
