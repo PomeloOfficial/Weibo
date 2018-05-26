@@ -1,4 +1,5 @@
 <img src="https://raw.githubusercontent.com/Rowingbohe/Weibo/master/screenshot.png">
+
 # Typecho 仿新浪微博主题 - Weibo
 
 本主题原作者不详，由<a href="https://www.52ecy.cn">阿珏</a>魔改为简约博客系统的主题，由<a href="https://blog.20d.win">Rowingbohe</a>二次移植入Typecho。
