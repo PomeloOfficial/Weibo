@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Rowingbohe/Weibo/master/screenshot.png">
+﻿<img src="https://raw.githubusercontent.com/Rowingbohe/Weibo/master/screenshot.png">
 
 # Typecho 仿新浪微博主题 - Weibo
 
