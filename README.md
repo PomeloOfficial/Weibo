@@ -31,7 +31,10 @@
  - 如果你喜欢这个主题，请按一下 Star，给我一颗小星星~也可以打赏我哦：https://money.20d.win
 
 # 预览链接
-https://blog.20d.win 
+官方预览界面：https://weibo.20d.win/
+
+优秀使用者（想上榜可提交Issue推荐）：
+ - https://blog.20d.win 
 
 # 使用遇到问题？
  - 如果遇到bug或者使用遇到问题，欢迎提Issue，或者email我：admin at 20d dot win
@@ -61,3 +64,5 @@ https://blog.20d.win
 v1.0.0：内测版，70%功能实现
 
 v1.9.26：第一个公测版，仍然没有单独的文章/页面的页面
+
+v1.9.89：仅仅更新了screenshot.png和readme.md
