@@ -9,14 +9,14 @@
 
  - 可自定义昵称、头像、简介、认证信息等30余项字段
 
- - 配合 <a href="https://github.com/idawnlight/typecho-links-material">Typecho-Links-Material </a>插件可实现侧边栏友情链接
+ - 配合 <a href="https://github.com/Rowingbohe/LInks-for-Weibo">Links-for-Weibo </a>插件可实现侧边栏友情链接
 
  - 比较遗憾的是，本主题目前不滋磁手机浏览（正在适配中）
 
 # 食用教程
  - 将本主题里的所有文件放在您网站目录的usr/themes内，注意文件夹名字必须为Weibo。
 
- - 下载安装上文提到的Links插件，并在后台的管理-友情链接内管理友情链接
+ - 下载安装上文提到的Links插件，并在后台的管理-友情链接内管理友情链接（如您没有这个必要可不装）
 
  - 进入外观启用本主题，并进入设置外观内填写信息
 
