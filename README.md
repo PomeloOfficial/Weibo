@@ -61,8 +61,9 @@
  - More...
 
 # 版本记录
-v1.0.0：内测版，70%功能实现
+v1.0.0(FirstVersion)：内测版，70%功能实现
 
-v1.9.26：第一个公测版，仍然没有单独的文章/页面的页面
+v1.9.26(ElderJiang)：第一个公测版，仍然没有单独的文章/页面的页面
 
-v1.9.89：仅仅更新了screenshot.png和readme.md
+v1.9.89(EightNineSixteenFour)：仅仅更新了screenshot.png和readme.md
+

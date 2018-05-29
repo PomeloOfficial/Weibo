@@ -15,6 +15,16 @@ function themeConfig($form) {
     );
     $form->addInput($registerOpen);
   
+    $faviconUrl = new Typecho_Widget_Helper_Form_Element_Text('faviconUrl', NULL, NULL, _t('favicon.ico图标链接'), _t('它会显示在你的浏览器任务栏里'));
+    $form->addInput($faviconUrl);
+    $bgUrl = new Typecho_Widget_Helper_Form_Element_Text('bgUrl', NULL, NULL, _t('背景图片链接'), _t('在这里填入背景链接'));
+    $form->addInput($bgUrl);
+
+    $commentCustom1 = new Typecho_Widget_Helper_Form_Element_Text('commentCustom1', NULL, NULL, _t('评论框内提示内容'), _t('比如：还不赶快说些什么呀~'));
+    $form->addInput($commentCustom1);
+    $commentCustom2 = new Typecho_Widget_Helper_Form_Element_Text('commentCustom2', NULL, NULL, _t('发送按钮文字'), _t('比如：发送~'));
+    $form->addInput($commentCustom2);
+
     $yourNickname = new Typecho_Widget_Helper_Form_Element_Text('yourNickname', NULL, NULL, _t('昵称'), _t('在这里填入君の名は，它会显示在你的头部资料卡和每条微博前，如：薄荷小屋'));
     $form->addInput($yourNickname);
     $yourDescription = new Typecho_Widget_Helper_Form_Element_Text('yourDescription', NULL, NULL, _t('简介'), _t('在这里填入你的简介，它会显示在你的头部资料卡里，如：一个很弱很弱的小萌新'));
@@ -93,5 +103,5 @@ function themeConfig($form) {
     $form->addInput($optionHeader);
     $optionFooter = new Typecho_Widget_Helper_Form_Element_Textarea('optionFooter', NULL, NULL, _t('自定义Footer'), _t('插入自定义Footer内容，可用于放置统计代码、验证360网站安全平台等。拖动右下角小三角可以调整文本框大小'));
     $form->addInput($optionFooter);
-  
+
 }
