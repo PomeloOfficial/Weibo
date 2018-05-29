@@ -1,10 +1,10 @@
-<?php
+﻿<?php
 /**
  * 本主题二次移植自<a href="https://www.52ecy.cn/post-71.html">新浪微博主题静态模板(移植 by 阿珏)</a>，由<a href="https://blog.20d.win">globalHe</a>二次移植.
  * 
  * @package Weibo
  * @author globalHe
- * @version 1.0.0
+ * @version 1.9.90
  * @link https://blog.20d.win
  */
 
