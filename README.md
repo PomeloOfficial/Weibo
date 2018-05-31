@@ -20,6 +20,8 @@
 
  - 进入外观启用本主题，并进入设置外观内填写信息
 
+ - 如果首页文章长度和侧边栏显示长度不协调，可到您网站的 admin/options-reading.php 内修改"每页文章数目".
+ 
  - 转发本主题或为本主题写文章，请只转发github链接（这种情况下可不必联系我）；如需转发源码请email：admin at 20d dot win
 
  - 魔改本主题限个人使用，公开发布请注明原作者：Rowingbohe，及链接：https://github.com/Rowingbohe/Weibo
