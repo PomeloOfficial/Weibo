@@ -7,7 +7,7 @@ function themeConfig($form) {
         <span style="margin-bottom:10px;display:block">本主题移植自<a href="https://www.52ecy.cn/post-71.html">新浪微博主题静态模板(by 阿珏)</a>，由<a href="https://blog.20d.win">globalHe</a>二次移植。  请关注 <a href="https://github.com/Rowingbohe/Weibo" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">Github：Rowingbohe/Weibo</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持。</span>妈妈说，不用最新版的人都是小猪~</span>
         <a href="https://github.com/Rowingbohe/Weibo/issues" target="_blank">有问题请Github提交Issues</a>，<a href="http://shang.qq.com/wpa/qunwpa?idkey=1153f6832fc98da2c8521912528e6ed9717756fde84bbe28a4dbcd6e04945f3f" target="_blank">当面联(p)系(y)作者请加群找管理globalHe Typecho Lover：573232605</a>';
     echo '</p>';
-
+    
     $headImgUrl = new Typecho_Widget_Helper_Form_Element_Text('headImgUrl', NULL, NULL, _t('头像地址'), _t('在这里填入头像的URL地址，它会显示在你的头部资料卡和每条微博前，如：https://blog.20d.win/image/headimg3.jpg'));
     $form->addInput($headImgUrl);
   
