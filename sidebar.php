@@ -1,4 +1,4 @@
-﻿      <section id="contents" class="width">
+      <section id="contents" class="width">
         <!-- 侧边栏 -->
         <aside id="aside" class="left">
           <div class="inner">
@@ -39,6 +39,10 @@
                   <i class="icon louie-link-o"></i>
                   <a class="tips-right" aria-label="个性域名" href="<?php $this->options->siteUrl(); ?>" target="_blank">个性域名：<?php $this->options->siteUrl(); ?></a></li>
               </ul>
+            <div class="sns readmore">
+                <a href="<?php $this->options->readMore() ?>">查看更多&nbsp;&gt;</a>
+            </div>
+
             <div class="alteration">
               <div class="widget">
                 <h3 class="widget-title">
