@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form) {
@@ -45,7 +45,9 @@ function themeConfig($form) {
     $form->addInput($yourPlace);
     $yourBirthday = new Typecho_Widget_Helper_Form_Element_Text('yourBirthday', NULL, NULL, _t('生日'), _t('在这里填入你的生日，它会显示在你的左侧资料卡里，如：8月17日'));
     $form->addInput($yourBirthday);
-  
+    $readMore = new Typecho_Widget_Helper_Form_Element_Text('readMore', NULL, NULL, _t('查看更多指向链接'), _t('在这里填入侧边栏“查看更多”的指向链接，它会显示在你的左侧资料卡里'));
+    $form->addInput($yourBirthday);
+
     $profileText1 = new Typecho_Widget_Helper_Form_Element_Text('profileText1', NULL, NULL, _t('资料卡关注按钮文字'), _t('资料卡里关注按钮的文字'));
     $form->addInput($profileText1);
     $profileLink1 = new Typecho_Widget_Helper_Form_Element_Text('profileLink1', NULL, NULL, _t('资料卡关注按钮鼠标悬停后的图片链接'), _t('资料卡的关注按钮鼠标悬停后会有一个图片，在这里填写图片链接（推荐填写二维码链接）'));
