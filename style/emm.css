@@ -1,6 +1,3 @@
-body{
-    cursor: url(../images/cursor.ico),auto;
-}
 a:hover {
     text-decoration: none;
 }
@@ -65,7 +62,7 @@ a:hover {
     width: 100%;
     height: 100%;
 }
-.portrait {
+.avatar {
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -73,7 +70,7 @@ a:hover {
     float: left;
     margin: 10px 0px 10px 0px;
 }
-.portrait:hover {
+.avatar:hover {
     transform: rotate(360deg);
 }
 .com {
@@ -90,24 +87,7 @@ a:hover {
     margin-bottom: 50px;
     margin-top: 10px;
 }
-/*颜表情评论框*/
-.expression {
-    list-style: none;
-    padding-left: 20px;
-}
-.expression li {
-    overflow: hidden;
-    float: left;
-    width: auto;
-    border-radius: 30px;
-    padding: 5px 5px 5px 5px;
-    margin: 5px 5px 5px 5px ;
-    background-color: #F7F7F7;
-}
-.expression li:hover{
-    -webkit-animation: shake 1s infinite;
-    animation: shake 1s infinite;
-}
+
 .clear{
     clear:both;
 }
@@ -159,32 +139,4 @@ a:hover {
 .shake {
     -webkit-animation: shake 1s infinite;
     animation: shake 1s infinite;
-}
-/*表情框抖动*/
-.pl{
-    font-size: 5px;
-    color: #888;
-}
-.pl:hover{
-    -webkit-animation: shake 0.5s infinite;
-    animation: shake 0.5s infinite;
-    background-color: #FFFFFF;
-    color: #444;
-}
-/*颜表情*/
-#OwO-body{
-    display: none;
-    float: left;
-    border: 1px solid #fff;
-}
-#OwO-body li{
-    cursor: pointer;
-}
-.input-div{
-    float: right;
-}
-.align{
-    text-align:left;
-    list-style:none;
-    margin-left: 20%;
 }

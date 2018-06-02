@@ -19,6 +19,8 @@ function themeConfig($form) {
     $form->addInput($faviconUrl);
     $bgUrl = new Typecho_Widget_Helper_Form_Element_Text('bgUrl', NULL, NULL, _t('背景图片链接'), _t('在这里填入背景链接'));
     $form->addInput($bgUrl);
+    $cardBgUrl = new Typecho_Widget_Helper_Form_Element_Text('cardBgUrl', NULL, NULL, _t('顶部卡片背景图片链接'), _t('在这里填入顶部卡片的背景链接'));
+    $form->addInput($cardBgUrl);
 
     $commentCustom1 = new Typecho_Widget_Helper_Form_Element_Text('commentCustom1', NULL, NULL, _t('评论框内提示内容'), _t('比如：还不赶快说些什么呀~'));
     $form->addInput($commentCustom1);
@@ -31,8 +33,6 @@ function themeConfig($form) {
     $form->addInput($yourDescription);
     $verified = new Typecho_Widget_Helper_Form_Element_Text('verified', NULL, NULL, _t('认证信息'), _t('在这里填入认证信息，它会显示在你的左侧资料卡里，如：辣鸡薄荷的个人微(Bo)博(Ke)'));
     $form->addInput($verified);
-    $followNumber = new Typecho_Widget_Helper_Form_Element_Text('followNumber', NULL, NULL, _t('关注数'), _t('关注数可自由设置，它会显示在你的左侧资料卡里，如：233'));
-    $form->addInput($followNumber);
     $levelNumber = new Typecho_Widget_Helper_Form_Element_Text('levelNumber', NULL, NULL, _t('微博等级'), _t('微博等级可自由设置，它会显示在你的左侧资料卡里，如：20'));
     $form->addInput($levelNumber);
     $yourPlace = new Typecho_Widget_Helper_Form_Element_Text('yourPlace', NULL, NULL, _t('居住地'), _t('在这里填入你的居住地，它会显示在你的左侧资料卡里，如：天朝 魔都'));

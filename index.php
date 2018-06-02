@@ -1,10 +1,10 @@
-﻿<?php
+<?php
 /**
  * 本主题二次移植自<a href="https://www.52ecy.cn/post-71.html">新浪微博主题静态模板(移植 by 阿珏)</a>，由<a href="https://blog.20d.win">globalHe</a>二次移植.
  * 
  * @package Weibo
  * @author globalHe
- * @version 1.9.90
+ * @version 1.0.0
  * @link https://blog.20d.win
  */
 
@@ -48,15 +48,21 @@ $this->need('header.php');?>
                   <h2 class="title" id="directory-0">
                     <a href="<?php $this->permalink() ?>" rel="bookmark"><?php $this->title() ?></a></h2>
                   <div class="summary" itemprop="description"><?php $this->excerpt(140, '...'); ?></div>
-                  <footer class="entry-footer">
-                    <li class="item count-comment">
-                      <span class="icon"></span><?php $this->commentsNum('%d '); ?></li>
-                </footer>
+                  <footer class="entry-footer"></br><span class="icon"></span><?php $this->commentsNum(); ?> / <a href="<?php $this->categoryUrl(','); ?>"><?php $this->category(','); ?></a> / Tags: <?php $this->tags(',', true, 'none'); ?></footer>
               </article>
              <?php endwhile; ?>
             </div>
-
             <!-- 文章列表结束 -->
+
+            <div class="heading">
+              <div class="inner">
+                <ul class="nav-menu-main">
+<?php $this->pageNav('上一页', '下一页'); ?>
+              </div>
+            </div>
+
+
+
           </main>
         </div>
       </section>

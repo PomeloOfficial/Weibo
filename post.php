@@ -20,15 +20,11 @@
             <article class="post">
                 <header class="entry-header">
                     <h1 class="title" itemprop="name"><?php $this->title() ?></h1>
-                    <div class="meta">发布于 <time itemprop="datePublished"><?php $this->date('Y-m-d H:i'); ?></time> / <a href="<?php $this->categoryUrl(','); ?>"><?php $this->category(','); ?></a> / <span><?php $this->commentsNum('%d条评论'); ?></span>
+                    <div class="meta">发布于 <time itemprop="datePublished"><?php $this->date('Y-m-d H:i'); ?></time> / <a href="<?php $this->categoryUrl(','); ?>"><?php $this->category(','); ?></a> / <span><?php $this->commentsNum('%d条评论'); ?></span> / Tags: <?php $this->tags(',', true, 'none'); ?>
                     </div>
                 </header>
                 <div class="entry-content"> 
-                    <p><?php $this->content('Continue Reading...'); ?></p>                </div>
-                <div class="tags">
-                                            <span class="label label-success"></span>
-                           Tags: <?php $this->tags(',', true, 'none'); ?>
-                                      </div> 
+                    <p><?php $this->content('Continue Reading...'); ?></p>                </div> 
 <?php $this->need('comments.php'); ?>
             </article>
         </div>

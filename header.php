@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -25,9 +25,8 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/custom.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/cue.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/like.css'); ?>" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('style/main.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('style/emm.css'); ?>" type="text/css">
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <?php $this->options->optionHeader(); ?>
     <?php $this->header(); ?>
   </head>
   <body class="home blog" style="background-image: url(<?php $this->options->themeUrl('images/body_repeat.png'); ?>); background-color: #d4d5e0; background-repeat: repeat-x; background-position: center 0;">
@@ -65,8 +64,8 @@
                <?php if($this->user->hasLogin()): ?>
                 欢迎 <?php $this->user->screenName(); ?> ~&nbsp;&nbsp;&nbsp;
                <?php endif; ?>
-              <form method="get" class="searchform" action="https://blog.52ecy.cn/" role="search">
-                <input type="search" name="keyword" class="textinput" size="26" placeholder="Search ...">
+                <form id="search" method="post" class="searchform" action="<?php $this->options->siteUrl(); ?>" role="search">
+                <input type="text" id="s" name="s" class="textinput" size="26" placeholder="Search ...">
                 <span class="icon search-icon"></span></form>
               <div class="logged button">
                <?php if($this->user->hasLogin()): ?>
@@ -91,7 +90,7 @@
           </div>
         </section>
         <!-- 导航结束 -->
-        <section class="banner bg" style="background-image: url(https://ww2.sinaimg.cn/large/a15b4afegy1fnagaoz26lj20sn0g476s.jpg)">
+        <section class="banner bg" style="background-image: url(<?php $this->options->cardBgUrl(); ?>)">
           <div class="big-title">
             <a style="color:#fff;" href="<?php $this->options->siteUrl(); ?>">
               <h1 class="big-title-h1"><?php $this->options->yourNickname(); ?>
