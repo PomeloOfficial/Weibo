@@ -73,12 +73,12 @@ a:hover {
 .avatar:hover {
     transform: rotate(360deg);
 }
-.com {
+.comment {
     margin-left: 55px;
     line-height: 25px;
     word-wrap: break-word;
 }
-.com-color {
+.comment-author {
     color: #00B6E1;
 }
 .route {
