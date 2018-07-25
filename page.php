@@ -20,7 +20,7 @@
             <article class="post">
                 <header class="entry-header">
                     <h1 class="title" itemprop="name"><?php $this->title() ?></h1>
-                    <div class="meta">发布于 <time itemprop="datePublished"><?php $this->date('Y-m-d H:i'); ?></time> / <a href="<?php $this->categoryUrl(','); ?>"><?php $this->category(','); ?></a> / <span><?php $this->commentsNum('%d条评论'); ?></span> / Tags: <?php $this->tags(',', true, 'none'); ?>
+                    <div class="meta">发布于 <time itemprop="datePublished"><?php $this->date('Y-m-d H:i'); ?></time> / <a href="<?php $this->categoryUrl(','); ?>"><?php $this->category(','); ?></a> / <span><?php $this->commentsNum('%d条评论'); ?></span> / Tags: <?php $this->tags(',', true, 'none'); ?> / <?php _e(getViewsStr($this)); ?> 次浏览
                     </div>
                 </header>
                 <div class="entry-content"> 

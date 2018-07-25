@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -8,26 +8,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
     <title><?php $this->options->title(); ?><?php $this->archiveTitle(); ?></title>
-
+ 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="<?php $this->options->faviconIUrl() ?>">
     <link rel="icon" sizes="192x192" href="<?php $this->options->faviconUrl() ?>">
     <link rel="apple-touch-icon" href="<?php $this->options->faviconUrl() ?>">
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="<?php $this->archiveTitle(); ?>">
+    <meta name="twitter:title" content="<?php $this->options->title(); ?>">
     <meta name="twitter:description" content="<?php $this->options->description() ?>">
     <meta name="twitter:image" content="<?php $this->options->faviconUrl() ?>">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="<?php $this->permalink(); ?>" />
+
+    <!-- QQ Card -->
+    <meta itemprop="name" content="<?php $this->options->title(); ?>"/>
+    <meta itemprop="image" content="<?php if ($this->options->ROWINGBOHE == '0'): ?><?php showThumbnail1($this); ?><?php elseif ($this->options->ROWINGBOHE == '1'): ?><?php showThumbnail2($this); ?><?php elseif ($this->options->ROWINGBOHE == '2'): ?><?php showThumbnail3($this); ?><?php elseif ($this->options->ROWINGBOHE == '3'): ?><?php $this->options->ROWINGBOHEUrl() ?><?php endif; ?>"/>
+<meta name="description" itemprop="description" content="<?php $this->options->description() ?>" />
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/style.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/custom.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/cue.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/like.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/emm.css'); ?>" type="text/css">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('style/style.mobile.css'); ?>" type="text/css">
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <?php $this->header(); ?>
+    <?php $this->options->optionHeader() ?>
   </head>
   <body class="home blog" style="background-image: url(<?php $this->options->themeUrl('images/body_repeat.png'); ?>); background-color: #d4d5e0; background-repeat: repeat-x; background-position: center 0;">
     <div id="wrapper" class="theme" style="background:url(<?php $this->options->bgUrl(); ?>) no-repeat top center; padding-top:50px;background-position: 0px 48px;background-color: white;background-attachment:fixed;background-size:100%;">
@@ -98,7 +106,7 @@
                 <i class="vip_lev" style="background-image:url(<?php $this->options->themeUrl('images/icon.png'); ?>);background-position: -25px -125px;"></i>
               </h1>
             </a>
-            <h3 class="big-title-h3 tips-top" aria-label="<?php $this->options->yourDescription(); ?>" id="yiyan"><?php $this->options->yourDescription(); ?>
+            <h3 class="big-title-h3 tips-top" aria-label="<?php $this->options->yourDescription(); ?>"><?php $this->options->yourDescription(); ?>
               <br></h3>
           </div>
 
@@ -106,7 +114,7 @@
             <div class="weixin">
               <?php $this->options->profileText1(); ?>
               <div class="weixin_drop-content">
-                <img class="weixin_qode" src="<?php $this->options->profileLink1(); ?>" alt="微信二维码"></div></div>
+                <img class="weixin_qode" src="<?php $this->options->profileLink1(); ?>" alt="二维码"></div></div>
             <a class="qq" href="<?php $this->options->profileLink2(); ?>">
               <?php $this->options->profileText2(); ?></a>
             <div class="menu">

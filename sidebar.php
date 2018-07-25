@@ -82,7 +82,7 @@
                       <div class="info">
                         <a href="{url}"><h4 class="title nowarp">{name}</h4></a>
                         <div class="meta">
-                          <a class="hot-comment-link" href="{url}">
+                          <a class="hot-comment-link" alt="{description}" href="{url}">
                             <p>{description}</p>
                           </a>
                         </div>
@@ -96,4 +96,3 @@
           </div>
         </aside>
         <!-- 侧边栏结束 -->
- 

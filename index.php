@@ -1,19 +1,13 @@
-﻿<?php
+<?php
 /**
- * 本主题由<a href="https://blog.20d.win" target="_blank">Rowingbohe</a>二次移植自WordPress. 原作: <a href="https://www.ahwgs.cn" target="_blank">W候人兮猗</a> 感谢: <a href="https://www.52ecy.cn" target="_blank">阿珏(这个字念Jué)酱</a> <a href="https://blog.iplayloli.com" target="_blank">Ryan's Blog</a> <a href="https://forum.typecho.love" target="_blank">Typecho Lover Forum</a>
+ * 本主题由<a href="https://blog.20d.win" target="_blank">Rowingbohe</a>二次移植自WordPress. 原作: <a href="https://www.ahwgs.cn" target="_blank">W候人兮猗</a> 感谢: <a href="https://www.52ecy.cn" target="_blank">阿珏博客</a> <a href="https://qqdie.com" target="_blank">QQ爹の博客</a> <a href="https://blog.iplayloli.com" target="_blank">Ryan's Blog</a> <a href="https://www.typecho.download" target="_blank">Typecho Download</a>
  * Tips:最新版本(点击下载): 
- * <a href="https://forum.typecho.love/d/2"><img src="https://img.shields.io/github/release/Rowingbohe/Weibo.svg?style=flat-square"></a>
+ * <a href="https://weibo.typecho.download"><img src="https://img.shields.io/github/release/Rowingbohe/Weibo.svg?style=flat-square"></a>
  * 
  * @package Weibo
-<<<<<<< HEAD
  * @author Rowingbohe
- * @version 2.5
- * @link https://forum.typecho.love/d/2
-=======
- * @author globalHe
- * @version 1.0.0
- * @link https://github.com/Rowingbohe/Weibo
->>>>>>> 6d92175097fa624cef03a6cffffaf9ca8fd80553
+ * @version 2.33
+ * @link https://weibo.typecho.download
  */
 
 
@@ -60,7 +54,6 @@ $this->need('header.php');?>
                   </div>
                   <h2 class="title" id="directory-0">
                     <a href="<?php $this->permalink() ?>" rel="bookmark"><?php $this->title() ?></a></h2>
-<<<<<<< HEAD
                   <div class="summary" itemprop="description"><a href="<?php $this->permalink() ?>"><?php $this->excerpt(140, '...'); ?>
                      <?php if ($this->options->ROWINGBOHE == '0'): ?>
                      <img src="<?php showThumbnail1($this); ?>" alt="<?php $this->title(); ?>" class="entry-image"></a></div>
@@ -78,10 +71,6 @@ $this->need('header.php');?>
                 <li class="item count-like"><a href="<?php $this->categoryUrl(','); ?>"><?php $this->category(','); ?></a></li>
                 <li class="item count-image">Tags:<?php $this->tags(',', true, 'none'); ?></li></ul>
         </footer>
-=======
-                  <div class="summary" itemprop="description"><?php $this->excerpt(140, '...'); ?></div>
-                  <footer class="entry-footer"></br><span class="icon"></span><?php $this->commentsNum(); ?> / <a href="<?php $this->categoryUrl(','); ?>"><?php $this->category(','); ?></a> / Tags: <?php $this->tags(',', true, 'none'); ?></footer>
->>>>>>> 6d92175097fa624cef03a6cffffaf9ca8fd80553
               </article>
              <?php endwhile; ?>
             </div>
