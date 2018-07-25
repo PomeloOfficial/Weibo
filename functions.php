@@ -2,6 +2,12 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form) {
+    echo '<p style="font-size:14px;">
+        <span style="display: block; margin-bottom: 10px; margin-top: 10px; font-size: 16px;">感谢使用 Weibo 主题</span>
+        <span style="margin-bottom:10px;display:block">本主题移植自<a href="https://www.52ecy.cn/post-71.html">新浪微博主题静态模板(by 阿珏)</a>，由<a href="https://blog.20d.win">globalHe</a>二次移植。  请关注 <a href="https://github.com/Rowingbohe/Weibo" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">Github：Rowingbohe/Weibo</a> 以获得<span style="color:#df3827;font-weight:bold;">最新版本支持。</span>妈妈说，不用最新版的人都是小猪~</span>
+        <a href="https://github.com/Rowingbohe/Weibo/issues" target="_blank">有问题请Github提交Issues</a>，<a href="http://shang.qq.com/wpa/qunwpa?idkey=1153f6832fc98da2c8521912528e6ed9717756fde84bbe28a4dbcd6e04945f3f" target="_blank">当面联(p)系(y)作者请加群找管理globalHe Typecho Lover：573232605</a>';
+    echo '</p>';
+    
     $headImgUrl = new Typecho_Widget_Helper_Form_Element_Text('headImgUrl', NULL, NULL, _t('头像地址'), _t('在这里填入头像的URL地址，它会显示在你的头部资料卡和每条微博前，如：https://blog.20d.win/image/headimg3.jpg'));
     $form->addInput($headImgUrl);
   
@@ -15,21 +21,33 @@ function themeConfig($form) {
     );
     $form->addInput($registerOpen);
   
+    $faviconUrl = new Typecho_Widget_Helper_Form_Element_Text('faviconUrl', NULL, NULL, _t('favicon.ico图标链接'), _t('它会显示在你的浏览器任务栏里'));
+    $form->addInput($faviconUrl);
+    $bgUrl = new Typecho_Widget_Helper_Form_Element_Text('bgUrl', NULL, NULL, _t('背景图片链接'), _t('在这里填入背景链接'));
+    $form->addInput($bgUrl);
+    $cardBgUrl = new Typecho_Widget_Helper_Form_Element_Text('cardBgUrl', NULL, NULL, _t('顶部卡片背景图片链接'), _t('在这里填入顶部卡片的背景链接'));
+    $form->addInput($cardBgUrl);
+
+    $commentCustom1 = new Typecho_Widget_Helper_Form_Element_Text('commentCustom1', NULL, NULL, _t('评论框内提示内容'), _t('比如：还不赶快说些什么呀~'));
+    $form->addInput($commentCustom1);
+    $commentCustom2 = new Typecho_Widget_Helper_Form_Element_Text('commentCustom2', NULL, NULL, _t('发送按钮文字'), _t('比如：发送~'));
+    $form->addInput($commentCustom2);
+
     $yourNickname = new Typecho_Widget_Helper_Form_Element_Text('yourNickname', NULL, NULL, _t('昵称'), _t('在这里填入君の名は，它会显示在你的头部资料卡和每条微博前，如：薄荷小屋'));
     $form->addInput($yourNickname);
     $yourDescription = new Typecho_Widget_Helper_Form_Element_Text('yourDescription', NULL, NULL, _t('简介'), _t('在这里填入你的简介，它会显示在你的头部资料卡里，如：一个很弱很弱的小萌新'));
     $form->addInput($yourDescription);
     $verified = new Typecho_Widget_Helper_Form_Element_Text('verified', NULL, NULL, _t('认证信息'), _t('在这里填入认证信息，它会显示在你的左侧资料卡里，如：辣鸡薄荷的个人微(Bo)博(Ke)'));
     $form->addInput($verified);
-    $followNumber = new Typecho_Widget_Helper_Form_Element_Text('followNumber', NULL, NULL, _t('关注数'), _t('关注数可自由设置，它会显示在你的左侧资料卡里，如：233'));
-    $form->addInput($followNumber);
     $levelNumber = new Typecho_Widget_Helper_Form_Element_Text('levelNumber', NULL, NULL, _t('微博等级'), _t('微博等级可自由设置，它会显示在你的左侧资料卡里，如：20'));
     $form->addInput($levelNumber);
     $yourPlace = new Typecho_Widget_Helper_Form_Element_Text('yourPlace', NULL, NULL, _t('居住地'), _t('在这里填入你的居住地，它会显示在你的左侧资料卡里，如：天朝 魔都'));
     $form->addInput($yourPlace);
     $yourBirthday = new Typecho_Widget_Helper_Form_Element_Text('yourBirthday', NULL, NULL, _t('生日'), _t('在这里填入你的生日，它会显示在你的左侧资料卡里，如：8月17日'));
     $form->addInput($yourBirthday);
-  
+    $readMore = new Typecho_Widget_Helper_Form_Element_Text('readMore', NULL, NULL, _t('查看更多指向链接'), _t('在这里填入侧边栏“查看更多”的指向链接，它会显示在你的左侧资料卡里'));
+    $form->addInput($yourBirthday);
+
     $profileText1 = new Typecho_Widget_Helper_Form_Element_Text('profileText1', NULL, NULL, _t('资料卡关注按钮文字'), _t('资料卡里关注按钮的文字'));
     $form->addInput($profileText1);
     $profileLink1 = new Typecho_Widget_Helper_Form_Element_Text('profileLink1', NULL, NULL, _t('资料卡关注按钮鼠标悬停后的图片链接'), _t('资料卡的关注按钮鼠标悬停后会有一个图片，在这里填写图片链接（推荐填写二维码链接）'));
@@ -93,5 +111,5 @@ function themeConfig($form) {
     $form->addInput($optionHeader);
     $optionFooter = new Typecho_Widget_Helper_Form_Element_Textarea('optionFooter', NULL, NULL, _t('自定义Footer'), _t('插入自定义Footer内容，可用于放置统计代码、验证360网站安全平台等。拖动右下角小三角可以调整文本框大小'));
     $form->addInput($optionFooter);
-  
+
 }

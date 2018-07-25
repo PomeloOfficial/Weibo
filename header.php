@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -8,18 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
     <title><?php $this->options->title(); ?><?php $this->archiveTitle(); ?></title>
-    <link rel="shortcut icon" href="<?php $this->options->themeUrl('images/favicon.ico'); ?>">
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="<?php $this->options->faviconIUrl() ?>">
+    <link rel="icon" sizes="192x192" href="<?php $this->options->faviconUrl() ?>">
+    <link rel="apple-touch-icon" href="<?php $this->options->faviconUrl() ?>">
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="<?php $this->archiveTitle(); ?>">
+    <meta name="twitter:description" content="<?php $this->options->description() ?>">
+    <meta name="twitter:image" content="<?php $this->options->faviconUrl() ?>">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="<?php $this->permalink(); ?>" />
+
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/style.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/custom.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/cue.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/like.css'); ?>" type="text/css">
-    <link rel="stylesheet" type="text/css" href="<?php $this->options->themeUrl('style/main.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('style/emm.css'); ?>" type="text/css">
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <?php $this->options->optionHeader(); ?>
     <?php $this->header(); ?>
   </head>
   <body class="home blog" style="background-image: url(<?php $this->options->themeUrl('images/body_repeat.png'); ?>); background-color: #d4d5e0; background-repeat: repeat-x; background-position: center 0;">
-    <div id="wrapper" class="theme" style="background:url(https://ww2.sinaimg.cn/large/a15b4afegy1fnaeuo3jd5j21hc0n5mzu.jpg) no-repeat top center; padding-top:50px;background-position: 0px 48px;background-color: white;background-attachment:fixed;background-size:100%;">
+    <div id="wrapper" class="theme" style="background:url(<?php $this->options->bgUrl(); ?>) no-repeat top center; padding-top:50px;background-position: 0px 48px;background-color: white;background-attachment:fixed;background-size:100%;">
       <header id="header" class="site-header">
        <!-- 导航 -->
         <section class="topbar">
@@ -53,8 +64,8 @@
                <?php if($this->user->hasLogin()): ?>
                 欢迎 <?php $this->user->screenName(); ?> ~&nbsp;&nbsp;&nbsp;
                <?php endif; ?>
-              <form method="get" class="searchform" action="https://blog.52ecy.cn/" role="search">
-                <input type="search" name="keyword" class="textinput" size="26" placeholder="Search ...">
+                <form id="search" method="post" class="searchform" action="<?php $this->options->siteUrl(); ?>" role="search">
+                <input type="text" id="s" name="s" class="textinput" size="26" placeholder="Search ...">
                 <span class="icon search-icon"></span></form>
               <div class="logged button">
                <?php if($this->user->hasLogin()): ?>
@@ -79,7 +90,7 @@
           </div>
         </section>
         <!-- 导航结束 -->
-        <section class="banner bg" style="background-image: url(https://ww2.sinaimg.cn/large/a15b4afegy1fnagaoz26lj20sn0g476s.jpg)">
+        <section class="banner bg" style="background-image: url(<?php $this->options->cardBgUrl(); ?>)">
           <div class="big-title">
             <a style="color:#fff;" href="<?php $this->options->siteUrl(); ?>">
               <h1 class="big-title-h1"><?php $this->options->yourNickname(); ?>

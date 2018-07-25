@@ -5,9 +5,15 @@
  * <a href="https://forum.typecho.love/d/2"><img src="https://img.shields.io/github/release/Rowingbohe/Weibo.svg?style=flat-square"></a>
  * 
  * @package Weibo
+<<<<<<< HEAD
  * @author Rowingbohe
  * @version 2.5
  * @link https://forum.typecho.love/d/2
+=======
+ * @author globalHe
+ * @version 1.0.0
+ * @link https://github.com/Rowingbohe/Weibo
+>>>>>>> 6d92175097fa624cef03a6cffffaf9ca8fd80553
  */
 
 
@@ -54,6 +60,7 @@ $this->need('header.php');?>
                   </div>
                   <h2 class="title" id="directory-0">
                     <a href="<?php $this->permalink() ?>" rel="bookmark"><?php $this->title() ?></a></h2>
+<<<<<<< HEAD
                   <div class="summary" itemprop="description"><a href="<?php $this->permalink() ?>"><?php $this->excerpt(140, '...'); ?>
                      <?php if ($this->options->ROWINGBOHE == '0'): ?>
                      <img src="<?php showThumbnail1($this); ?>" alt="<?php $this->title(); ?>" class="entry-image"></a></div>
@@ -71,6 +78,10 @@ $this->need('header.php');?>
                 <li class="item count-like"><a href="<?php $this->categoryUrl(','); ?>"><?php $this->category(','); ?></a></li>
                 <li class="item count-image">Tags:<?php $this->tags(',', true, 'none'); ?></li></ul>
         </footer>
+=======
+                  <div class="summary" itemprop="description"><?php $this->excerpt(140, '...'); ?></div>
+                  <footer class="entry-footer"></br><span class="icon"></span><?php $this->commentsNum(); ?> / <a href="<?php $this->categoryUrl(','); ?>"><?php $this->category(','); ?></a> / Tags: <?php $this->tags(',', true, 'none'); ?></footer>
+>>>>>>> 6d92175097fa624cef03a6cffffaf9ca8fd80553
               </article>
              <?php endwhile; ?>
             </div>
