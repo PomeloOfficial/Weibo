@@ -10,19 +10,19 @@
 
 # Typecho 仿新浪微博主题 - Weibo
 
-本主题原作者w候人兮猗(http://ahwgs.cn)，由[阿珏(这个字念Jué)酱](https://www.52ecy.cn) & [Rowingbohe](https://blog.20d.win)移植入 Typecho。
+本主题原作者[w候人兮猗](http://ahwgs.cn)，由[阿珏(这个字念Jué)酱](https://www.52ecy.cn) & [Rowingbohe](https://blog.20d.win)移植入 Typecho。
 
 # 主题特点
  - 仿照新浪微博主页界面，适合微博控
 
  - 可自定义昵称、头像、简介、认证信息等好多好多字段
 
- - 配合 [Links-for-Weibo](https://github.com/Rowingbohe/LInks-for-Weibo)>插件可实现侧边栏友情链接
+ - 配合 [Links-for-Weibo](https://github.com/Rowingbohe/LInks-for-Weibo)插件可实现侧边栏友情链接
 
  - 滋磁自适应！！嵌套暂不支持，感谢谅解。
 
 # 食用教程
- - 将本主题里的所有文件放在您网站目录的usr/themes内。
+ - 将本主题里的所有文件放在您网站目录的 usr/themes 内。
  - 下载安装上文提到的Links插件，并在后台的管理-友情链接内管理友情链接（如您没有这个必要可不装）
  - 进入外观启用本主题，并进入设置外观内填写信息
  - 如果首页文章长度和侧边栏显示长度不协调，可到您网站的 admin/options-reading.php 内修改"每页文章数目".
@@ -46,7 +46,7 @@
  - 感谢爱萝莉的Ayan提供浏览统计：https://blog.iplayloli.com
  - 缩略图代码引用自抓住那只羊驼的主题：http://3gjn.com
  - 感谢 Css.loli.net 前端公共资源库提供 Jquery 加速。这个公共资源库速度超级快，东西超级多！实力安利：https://css.loli.net
- - 感谢 Typecho Lover QQ Group & Typecho Lover Forum 疯狂催更的每一位小伙伴！感谢你们对我的信任和支持！！这里特别感谢一下咱们的站长&群主 @yiveco 同志对我的滋磁鼓励信任！！！
+ - 感谢 Typecho Lover QQ Group & Typecho Lover Forum 疯狂催更的每一位小伙伴！感谢你们对我的信任和支持！！这里特别感谢一下咱们的站长&群主 Yiveco 同志对我的滋磁鼓励信任！！！
  - 最后感谢每一个使用本主题、给了 Star、规范转载的你~
 
 # 备忘录 - 下一步计划
@@ -54,13 +54,7 @@
 
 # 版本记录
 v1.0.0：内测版，70%功能实现
-v1.9.26：第一个公测版，仍然没有单独的page.php/post.php
-v1.9.89：仅仅更新了screenshot.png和readme.md
 v1.9.90：最后一个内测版
- - 修复了文章显示的bug
- - 增加comments.php、post.php
- - 增加评论区
- - 去除原作部分多余的代码
 V2.0.0（公测版）更新内容：
  - 侧边栏的三个数字改为文章、评论数、分类数
  - 可自定义顶部卡片背景链接
