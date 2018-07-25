@@ -4,16 +4,17 @@
           <div class="inner">
             <div class="sns web-info">
               <li class="frinum">
-                <a href="javascript:void(0)"><?php $this->options->followNumber() ?>
-                  <span>关注</span></a>
+              <?php Typecho_Widget::widget('Widget_Stat')->to($stat); ?>
+                <a href="javascript:void(0)"><?php echo $stat->PublishedPostsNum ?>
+                  <span>文章</span></a>
               </li>
               <li class="vitnum">
-                <a href="javascript:void(0)">1292
-                  <span>浏览</span></a>
+                <a href="javascript:void(0)"><?php echo $stat->PublishedCommentsNum ?>
+                  <span>评论</span></a>
               </li>
               <li class="ptnum">
-                <a href="javascript:void(0)"><?php echo $stat->publishedPostsNum;?>
-                  <span>文章</span></a>
+                <a href="javascript:void(0)"><?php echo $stat->categoriesNum ?>
+                  <span>分类</span></a>
               </li>
             </div>
             <div class="sns master-info">
@@ -38,9 +39,10 @@
                   <i class="icon louie-link-o"></i>
                   <a class="tips-right" aria-label="个性域名" href="<?php $this->options->siteUrl(); ?>" target="_blank">个性域名：<?php $this->options->siteUrl(); ?></a></li>
               </ul>
-              <div class="sns readmore">
-                <a href="https://www.52ecy.cn/post-18.html">查看更多&nbsp;&gt;</a></div>
+            <div class="sns readmore">
+                <a href="<?php $this->options->readMore() ?>">查看更多&nbsp;&gt;</a>
             </div>
+
             <div class="alteration">
               <div class="widget">
                 <h3 class="widget-title">
@@ -67,6 +69,7 @@
                 <!-- 评论结束 -->
                 </div>
               </div>
+            <?php if (class_exists("Links_Plugin")): ?>
               <div class="widget">
                 <h3 class="widget-title">
                   <i class="icon icon louie-smile"></i>左邻右舍</h3>
@@ -79,7 +82,7 @@
                       <div class="info">
                         <a href="{url}"><h4 class="title nowarp">{name}</h4></a>
                         <div class="meta">
-                          <a class="hot-comment-link" href="{url}">
+                          <a class="hot-comment-link" alt="{description}" href="{url}">
                             <p>{description}</p>
                           </a>
                         </div>
@@ -89,6 +92,7 @@
                 <!-- 友链结束 -->
                 </ul>
               </div>
+<?php endif; ?>
           </div>
         </aside>
         <!-- 侧边栏结束 -->
