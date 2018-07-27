@@ -1,13 +1,13 @@
 <?php
 /**
- * 本主题由<a href="https://blog.20d.win" target="_blank">Rowingbohe</a>二次移植自WordPress. 原作: <a href="https://www.ahwgs.cn" target="_blank">W候人兮猗</a> 感谢: <a href="https://www.52ecy.cn" target="_blank">阿珏博客</a> <a href="https://qqdie.com" target="_blank">QQ爹の博客</a> <a href="https://blog.iplayloli.com" target="_blank">Ryan's Blog</a> <a href="https://www.typecho.download" target="_blank">Typecho Download</a>
+ * 本主题由<a href="https://blog.20d.win" target="_blank">Rowingbohe</a>二次移植自WordPress. 原作: <a href="https://www.ahwgs.cn" target="_blank">W候人兮猗</a> 感谢: <a href="https://www.52ecy.cn" target="_blank">阿珏博客</a> <a href="https://qqdie.com" target="_blank">QQ爹の博客</a> <a href="https://blog.iplayloli.com" target="_blank">Ryan's Blog</a> <a href="https://forum.typecho.love/d/2" target="_blank">Typecho Lover</a>
  * Tips:最新版本(点击下载): 
- * <a href="https://weibo.typecho.download"><img src="https://img.shields.io/github/release/Rowingbohe/Weibo.svg?style=flat-square"></a>
+ * <a href="https://forum.typecho.love/d/2"><img src="https://img.shields.io/github/release/Rowingbohe/Weibo.svg?style=flat-square"></a>
  * 
  * @package Weibo
  * @author Rowingbohe
- * @version 2.33
- * @link https://weibo.typecho.download
+ * @version 2.5
+ * @link https://forum.typecho.love/d/2
  */
 
 
