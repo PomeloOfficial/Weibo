@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+	<meta charset="<?php $this->options->charset(); ?>">
     <meta name="theme-color" content="#4c4c4c">
     <meta name="applicable-device" content="pc,mobile">
     <meta name="renderer" content="webkit">
@@ -24,7 +24,7 @@
     <!-- QQ Card -->
     <meta itemprop="name" content="<?php $this->options->title(); ?>"/>
     <meta itemprop="image" content="<?php if ($this->options->ROWINGBOHE == '0'): ?><?php showThumbnail1($this); ?><?php elseif ($this->options->ROWINGBOHE == '1'): ?><?php showThumbnail2($this); ?><?php elseif ($this->options->ROWINGBOHE == '2'): ?><?php showThumbnail3($this); ?><?php elseif ($this->options->ROWINGBOHE == '3'): ?><?php $this->options->ROWINGBOHEUrl() ?><?php endif; ?>"/>
-<meta name="description" itemprop="description" content="<?php $this->options->description() ?>" />
+    <meta name="description" itemprop="description" content="<?php $this->options->description() ?>" />
 
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/style.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/custom.css'); ?>" type="text/css">
@@ -38,33 +38,14 @@
     <?php $this->options->optionHeader() ?>
   </head>
   <body class="home blog" style="background-image: url(<?php $this->options->themeUrl('images/body_repeat.png'); ?>); background-color: #d4d5e0; background-repeat: repeat-x; background-position: center 0;">
-    <div id="wrapper" class="theme" style="background:url(<?php $this->options->bgUrl(); ?>) no-repeat top center; padding-top:50px;background-position: 0px 48px;background-color: white;background-attachment:fixed;background-size:100%;">
+    <div id="wrapper" class="theme" style="background:url(<?php ($this->options->bgUrl) ? $this->options->bgUrl() : $this->options->themeUrl('images/bg.jpg'); ?>) no-repeat top center; padding-top:50px;background-position: 0px 48px;background-color: white;background-attachment:fixed;background-size:100%;">
       <header id="header" class="site-header">
        <!-- 导航 -->
         <section class="topbar">
           <div class="inner top-width">
             <nav class="nav pull-left">
               <ul id="menu-1" class="nav-menu top-menu icon">
-                    <li>
-                       <a href="<?php $this->options->Menu1link(); ?>">
-                       <?php $this->options->Menu1icon(); ?><?php $this->options->Menu1text(); ?></a>
-                    </li>
-                    <li>
-                       <a href="<?php $this->options->Menu2link(); ?>">
-                       <?php $this->options->Menu2icon(); ?><?php $this->options->Menu2text(); ?></a>
-                    </li>
-                    <li>
-                       <a href="<?php $this->options->Menu3link(); ?>">
-                       <?php $this->options->Menu3icon(); ?><?php $this->options->Menu3text(); ?></a>
-                    </li>
-                    <li>
-                       <a href="<?php $this->options->Menu4link(); ?>">
-                       <?php $this->options->Menu4icon(); ?><?php $this->options->Menu4text(); ?></a>
-                    </li>
-                    <li>
-                       <a href="<?php $this->options->Menu5link(); ?>">
-                       <?php $this->options->Menu5icon(); ?><?php $this->options->Menu5text(); ?></a>
-                    </li>
+                <?php $this->options->menuContent(); ?>
               </ul>
             </nav>
             <!-- 导航右侧 -->
@@ -98,15 +79,15 @@
           </div>
         </section>
         <!-- 导航结束 -->
-        <section class="banner bg" style="background-image: url(<?php $this->options->cardBgUrl(); ?>)">
+        <section class="banner bg" style="background-image: url(<?php ($this->options->cardBgUrl) ? $this->options->cardBgUrl() : $this->options->themeUrl('images/cardBg.png'); ?>)">
           <div class="big-title">
             <a style="color:#fff;" href="<?php $this->options->siteUrl(); ?>">
-              <h1 class="big-title-h1"><?php $this->options->yourNickname(); ?>
+              <h1 class="big-title-h1"><?php ($this->options->yourNickname) ? $this->options->yourNickname() : $this->options->title(); ?>
                 <i class="male" style="background-image:url(<?php $this->options->themeUrl('images/icon.png'); ?>);background-position: -100px -50px;"></i>
                 <i class="vip_lev" style="background-image:url(<?php $this->options->themeUrl('images/icon.png'); ?>);background-position: -25px -125px;"></i>
               </h1>
             </a>
-            <h3 class="big-title-h3 tips-top" aria-label="<?php $this->options->yourDescription(); ?>"><?php $this->options->yourDescription(); ?>
+            <h3 class="big-title-h3 tips-top" aria-label="<?php ($this->options->yourNickname) ? $this->options->yourDescription() : $this->options->description(); ?>"><?php ($this->options->yourNickname) ? $this->options->yourDescription() : $this->options->description(); ?>
               <br></h3>
           </div>
 
@@ -123,17 +104,7 @@
               <span>☰</span>
               <div class="menu_drop-content">
                 <ul>
-                  <li>
-                    <a href="<?php $this->options->yourMenuLink1(); ?>" rel="nofollow" target="_blank"><?php $this->options->yourMenuText1(); ?></a></li>
-                  <li class="line"></li>
-                  <li>
-                    <a href="<?php $this->options->yourMenuLink2(); ?>" rel="nofollow" target="_blank"><?php $this->options->yourMenuText2(); ?></a></li>
-                  <li class="line"></li>
-                  <li>
-                    <a href="<?php $this->options->yourMenuLink3(); ?>" rel="nofollow" target="_blank"><?php $this->options->yourMenuText3(); ?></a></li>
-                  <li class="line"></li>
-                  <li>
-                    <a href="<?php $this->options->yourMenuLink4(); ?>" rel="nofollow" target="_blank"><?php $this->options->yourMenuText4(); ?></a></li>
+                  <?php $this->options->yourMenuContent(); ?>
                 </ul>
               </div>
             </div>
@@ -146,4 +117,5 @@
         </div>
         <div class="banner-item width">
           <a class="active" href="<?php $this->options->siteUrl(); ?>">我的主页</a>
+        </div>
       </header>

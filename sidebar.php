@@ -28,16 +28,16 @@
               <ul class="m_info-items">
                 <li class="item">
                   <i class="icon louie-location"></i>
-                  <span class="tips-right" aria-label="我在<?php $this->options->yourPlace() ?>，你在哪里?">居住地：<?php $this->options->yourPlace() ?></span></li>
+                  <span class="tips-right" aria-label="我在<?php $this->options->yourPlace() ?>，你在哪里？">居住地：<?php $this->options->yourPlace() ?></span></li>
                 <li class="item">
                   <i class="icon louie-time-o"></i>
                   <span class="tips-right" aria-label="我的生日：<?php $this->options->yourBirthday() ?>">生日：<?php $this->options->yourBirthday() ?></span></li>
                 <li class="item">
                   <i class="icon louie-smiling"></i>
-                  <span class="tips-right" aria-label="<?php $this->options->yourDescription() ?>">简介：<?php $this->options->yourDescription() ?></span></li>
+                  <span class="tips-right" aria-label="<?php ($this->options->yourNickname) ? $this->options->yourDescription() : $this->options->description(); ?>">简介：<?php ($this->options->yourNickname) ? $this->options->yourDescription() : $this->options->description(); ?></span></li>
                 <li class="item last">
                   <i class="icon louie-link-o"></i>
-                  <a class="tips-right" aria-label="个性域名" href="<?php $this->options->siteUrl(); ?>" target="_blank">个性域名：<?php $this->options->siteUrl(); ?></a></li>
+                  <a class="tips-right" aria-label="个性域名" href="<?php $this->options->siteUrl(); ?>" target="_blank"><?php $this->options->siteUrl(); ?></a></li>
               </ul>
             <div class="sns readmore">
                 <a href="<?php $this->options->readMore() ?>">查看更多&nbsp;&gt;</a>
