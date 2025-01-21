@@ -71,8 +71,7 @@ function themeConfig($form) {
         }
     };
     echo '<p style="font-size:14px;">
-        <span style="display: block; margin-bottom: 10px; margin-top: 10px; font-size: 20px;">Weibo主题后台</span>
-        相关链接：<a href="https://github.com/PomeloOfficial/Weibo" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">GitHub仓库</a>&nbsp;<a href="https://weibo.rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">主题文档</a>&nbsp;<a href="https://rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">作者网站</a>&nbsp;<a href="https://github.com/PomeloOfficial/Weibo/issues" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">提交反馈(GitHub Issues)</a><br>';
+        <span style="display: block; margin-bottom: 10px; margin-top: 10px; font-size: 20px;">Weibo主题后台</span>设置可参照&nbsp;<a href="https://weibo.rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">主题文档</a><br>其他链接：<a href="https://github.com/PomeloOfficial/Weibo" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">GitHub仓库</a>&nbsp;<a href="https://rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">作者网站</a>&nbsp;<a href="https://github.com/PomeloOfficial/Weibo/issues" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">提交反馈(GitHub Issues)</a><br>';
     echo '当前版本：3.0 最新版本：<img src="https://img.shields.io/github/release/PomeloOfficial/Weibo.svg?style=flat-square"><br>';
     echo '
     <form class="protected home" action="?' . $name . 'bf" method="post">
