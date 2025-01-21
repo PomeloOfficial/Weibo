@@ -103,7 +103,7 @@
             <div class="weixin">
               <?php $this->options->profileText1(); ?>
               <div class="weixin_drop-content">
-                <img class="weixin_qode" src="<?php $this->options->profileLink1(); ?>" alt="二维码"></div></div>
+                <img class="weixin_qode" src="<?php ($this->options->profileLink1) ? $this->options->profileLink1() : $this->options->themeUrl('images/qrcode.jpg'); ?>" alt="二维码"></div></div>
             <a class="qq" href="<?php $this->options->profileLink2(); ?>">
               <?php $this->options->profileText2(); ?></a>
             <div class="menu">

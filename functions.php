@@ -139,7 +139,7 @@ function themeConfig($form) {
 
     $profileText1 = new \Typecho\Widget\Helper\Form\Element\Text('profileText1', NULL, 'WeChat', _t('资料卡第一个按钮的文字'), _t('资料卡里关注按钮的文字'));
     $form->addInput($profileText1);
-    $profileLink1 = new \Typecho\Widget\Helper\Form\Element\Text('profileLink1', NULL, NULL, _t('资料卡第一个按钮鼠标悬停后的图片链接'), _t('资料卡的关注按钮鼠标悬停后会有一个图片，在这里填写图片链接（推荐填写一个二维码的链接）'));
+    $profileLink1 = new \Typecho\Widget\Helper\Form\Element\Text('profileLink1', NULL, NULL, _t('资料卡第一个按钮鼠标悬停后的图片链接'), _t('资料卡的关注按钮鼠标悬停后会有一个图片，在这里填写图片链接（推荐填写一个二维码的链接）；不填则使用主题目录下images/qrcode.jpg，也可直接替换该文件'));
     $form->addInput($profileLink1);
     $profileText2 = new \Typecho\Widget\Helper\Form\Element\Text('profileText2', NULL, 'About Me', _t('资料卡第二个按钮的文字'), _t('资料卡里第二个按钮的文字'));
     $form->addInput($profileText2);
