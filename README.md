@@ -39,7 +39,7 @@
 
 那么，乙巳蛇年春节前夕，谨在此回应大家的等待：Weibo 主题，打赢复活赛了！
 
-<img src="/womeiyijian.png" alt="孩子们，我回来了" width="100px">
+<img src="https://weibo.rowingbohe.com/womeiyijian.png" alt="孩子们，我回来了" width="100px">
 
 ——<a href="https://rowingbohe.com" target="_blank">Pomelo</a> 2025-01-21 于浙江
 
