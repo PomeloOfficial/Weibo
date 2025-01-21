@@ -91,7 +91,7 @@ function themeConfig($form) {
             '4' => _t('关闭首页大图<br>'),
         ),
 
-        '1', _t('首页大图样式'), _t("首页文章列表第一张大图样式。<br>选择第1项或第2项，需同步修改下方“随机图数量”设置，并将随机图库上传到主题目录下的/images/random/文件夹，文件名格式为数字 + .jpg；<br>选择第3项或第4项，需同步修改下方“文章无图时的大图链接”。<br>注意：选取第1或第2项需要加载较多图片，可能会使访问速度变慢。")
+        '1', _t('首页大图样式'), _t("首页文章列表第一张大图样式。<br>选择第1项或第2项，需同步修改下方“随机图数量”，并将随机图库上传到主题目录下的/images/random/文件夹，文件名格式为数字 + .jpg；<br>选择第3项或第4项，需同步修改下方“大图链接”。<br>注意：选取第1或第2项需要加载较多图片，可能会使访问速度变慢。")
     );
     $form->addInput($ROWINGBOHE);
     $randomNum = new \Typecho\Widget\Helper\Form\Element\Text('randomNum', NULL, '5', _t('随机图数量'), _t('如果首页大图样式选了第一或者二项，在这填写大图数量'));
@@ -99,14 +99,35 @@ function themeConfig($form) {
     $ROWINGBOHEUrl = new \Typecho\Widget\Helper\Form\Element\Text('ROWINGBOHEUrl', NULL, NULL, _t('大图链接'), _t('如果首页大图样式选了第三或者第四项，在这填写链接'));
     $form->addInput($ROWINGBOHEUrl);
 
+    $menuContent = new \Typecho\Widget\Helper\Form\Element\Textarea('menuContent', NULL, 
+    '<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>主页</a></li>',
+    _t('导航栏左侧菜单配置'), _t('一行为一个按钮，格式为： &lt;li&gt;&lt;a href="对应链接"&gt;&lt;i&gt;图标代码&lt;/i&gt;菜单名称&lt;/a&gt;&lt;/li&gt;<br>主题已内置Font Awesome V4，可直接使用，可以在 <a href="https://fontawesome.com.cn/v4/icons">https://fontawesome.com.cn/v4/icons</a> 找到图标代码。你也可以自行引入其他图标库后使用。拖动右下角小三角可以调整文本框大小'));
+    $form->addInput($menuContent);
+    $searchOpen = new \Typecho\Widget\Helper\Form\Element\Radio('searchOpen',
+        array(
+            '0' => _t('是 <br />'),
+            '1' => _t('否 <br />'),
+        ),
 
+        '0', _t('是否显示搜索框'), _t("顶部导航栏默认展示搜索框，可选择是否显示。")
+    );
+    $form->addInput($searchOpen);
+    $loginButtonOpen = new \Typecho\Widget\Helper\Form\Element\Radio('loginButtonOpen',
+        array(
+            '0' => _t('是 <br />'),
+            '1' => _t('否 <br />'),
+        ),
+
+        '0', _t('是否显示登录按钮'), _t("顶部导航栏默认展示登录按钮（登录状态下展示登出、后台两个按钮），可选择是否显示。")
+    );
+    $form->addInput($loginButtonOpen);
     $registerOpen = new \Typecho\Widget\Helper\Form\Element\Radio('registerOpen',
         array(
             '0' => _t('是 <br />'),
             '1' => _t('否 <br />'),
         ),
 
-        '1', _t('注册按钮是否显示'), _t("用户未登录时在顶部导航栏展示“Sign up”按钮，可选择是否显示。如未启用注册功能，请选择“否”。")
+        '1', _t('是否显示注册按钮'), _t("用户未登录时在顶部导航栏展示“Sign up”按钮，可选择是否显示。如未启用注册功能，请选择“否”。")
     );
     $form->addInput($registerOpen);
 
@@ -150,11 +171,6 @@ function themeConfig($form) {
     '<li><a href="#">主页</a></li>',
     _t('资料卡“☰”菜单展开按钮配置'), _t('一行为一个按钮，格式为： &lt;li&gt;&lt;a href="对应链接"&gt;&菜单名称&lt;/a&gt;&lt;/li&gt;<br>拖动右下角小三角可以调整文本框大小'));
     $form->addInput($yourMenuContent);
-
-    $menuContent = new \Typecho\Widget\Helper\Form\Element\Textarea('menuContent', NULL, 
-    '<li><a href="#"><i class="fa fa-home" aria-hidden="true" /></i>主页</a></li>',
-    _t('导航栏左侧菜单配置'), _t('一行为一个按钮，格式为： &lt;li&gt;&lt;a href="对应链接"&gt;&lt;i&gt;图标代码&lt;/i&gt;菜单名称&lt;/a&gt;&lt;/li&gt;<br>主题已内置Font Awesome V4，可直接使用，可以在 <a href="https://fontawesome.com.cn/v4/icons">https://fontawesome.com.cn/v4/icons</a> 找到图标代码。你也可以自行引入其他图标库后使用。拖动右下角小三角可以调整文本框大小'));
-    $form->addInput($menuContent);
   
     $optionHeader = new \Typecho\Widget\Helper\Form\Element\Textarea('optionHeader', NULL, NULL, _t('自定义Header'), _t('插入自定义Header内容，可用于引入其他资源等。拖动右下角小三角可以调整文本框大小'));
     $form->addInput($optionHeader);

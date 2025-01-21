@@ -41,7 +41,12 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/emm.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style/style.mobile.css'); ?>" type="text/css">
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha256-BYjRZhSY2ARUPcFTf5eEh3qWK58O88TM7nZet/JUNhE=" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css" integrity="sha256-TBe0l9PhFaVR3DwHmA2jQbUf1y6yQ22RBgJKKkNkC50=" crossorigin="anonymous">
+	
     <?php $this->header(); ?>
     <?php $this->options->optionHeader() ?>
   </head>
@@ -61,9 +66,12 @@
                <?php if($this->user->hasLogin()): ?>
                 欢迎 <?php $this->user->screenName(); ?> ~&nbsp;&nbsp;&nbsp;
                <?php endif; ?>
+               <?php if ($this->options->searchOpen == '0'): ?>
                 <form id="search" method="post" class="searchform" action="<?php $this->options->siteUrl(); ?>" role="search">
                 <input type="text" id="s" name="s" class="textinput" size="26" placeholder="Search ...">
                 <span class="icon search-icon"></span></form>
+               <?php endif; ?>
+             <?php if ($this->options->loginButtonOpen == '0'): ?>
               <div class="logged button">
                <?php if($this->user->hasLogin()): ?>
                 <a href="<?php $this->options->logoutUrl(); ?>" target="_blank" class="login" style="margin-right:10px;">
@@ -83,6 +91,7 @@
                <?php endif; ?>
                <?php endif; ?>
               </div>
+             <?php endif; ?>
             </div>
           </div>
         </section>
