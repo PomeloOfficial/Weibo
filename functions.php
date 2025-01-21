@@ -81,6 +81,8 @@ function themeConfig($form) {
 
     $headImgUrl = new \Typecho\Widget\Helper\Form\Element\Text('headImgUrl', NULL, 'https://q1.qlogo.cn/g?b=qq&nk=723326663&s=640', _t('头像地址'), _t('在这里填入头像的URL地址，它会显示在你的头部资料卡和每条微博前。默认使用QQ头像API（https://q1.qlogo.cn/g?b=qq&nk=QQ号&s=640），可将上方作者QQ号替换为你的QQ号；也可替换为其他图片链接'));
     $form->addInput($headImgUrl);
+    $faviconUrl = new \Typecho\Widget\Helper\Form\Element\Text('faviconUrl', NULL, NULL, _t('favicon.ico图标链接'), _t('它会显示在你的浏览器任务栏里；不填写则默认使用主题目录下images/favicon.ico，也可直接替换该文件'));
+    $form->addInput($faviconUrl);
   
     $ROWINGBOHE = new \Typecho\Widget\Helper\Form\Element\Radio('ROWINGBOHE',
         array(
@@ -131,17 +133,10 @@ function themeConfig($form) {
     );
     $form->addInput($registerOpen);
 
-    $faviconUrl = new \Typecho\Widget\Helper\Form\Element\Text('faviconUrl', NULL, NULL, _t('favicon.ico图标链接'), _t('它会显示在你的浏览器任务栏里；不填写则默认使用主题目录下images/favicon.ico，也可直接替换该文件'));
-    $form->addInput($faviconUrl);
     $bgUrl = new \Typecho\Widget\Helper\Form\Element\Text('bgUrl', NULL, NULL, _t('背景图片链接'), _t('在这里填入背景图片链接；不填则使用主题目录下images/bg.jpg，也可直接替换该文件'));
     $form->addInput($bgUrl);
     $cardBgUrl = new \Typecho\Widget\Helper\Form\Element\Text('cardBgUrl', NULL, NULL, _t('顶部卡片背景图片链接'), _t('在这里填入顶部卡片的背景链接；不填则使用主题目录下images/cardBg.jpg，也可直接替换该文件'));
     $form->addInput($cardBgUrl);
-
-    $commentCustom1 = new \Typecho\Widget\Helper\Form\Element\Text('commentCustom1', NULL, '还不赶快说些什么呀', _t('评论框内提示内容'), _t(''));
-    $form->addInput($commentCustom1);
-    $commentCustom2 = new \Typecho\Widget\Helper\Form\Element\Text('commentCustom2', NULL, '发送', _t('发送按钮文字'), _t(''));
-    $form->addInput($commentCustom2);
 
     $yourNickname = new \Typecho\Widget\Helper\Form\Element\Text('yourNickname', NULL, NULL, _t('昵称'), _t('在这里填入君の名は，它会显示在你的头部资料卡里，不填则使用系统设置内的站点名称'));
     $form->addInput($yourNickname);
@@ -166,12 +161,16 @@ function themeConfig($form) {
     $form->addInput($profileText2);
     $profileLink2 = new \Typecho\Widget\Helper\Form\Element\Text('profileLink2', NULL, NULL, _t('资料卡第二个按钮的链接'), _t('资料卡里第二个按钮是点击跳转链接的，在这填写链接'));
     $form->addInput($profileLink2);
-    
     $yourMenuContent = new \Typecho\Widget\Helper\Form\Element\Textarea('yourMenuContent', NULL, 
     '<li><a href="#">主页</a></li>',
     _t('资料卡“☰”菜单展开按钮配置'), _t('一行为一个按钮，格式为： &lt;li&gt;&lt;a href="对应链接"&gt;&菜单名称&lt;/a&gt;&lt;/li&gt;<br>拖动右下角小三角可以调整文本框大小'));
     $form->addInput($yourMenuContent);
   
+    $commentCustom1 = new \Typecho\Widget\Helper\Form\Element\Text('commentCustom1', NULL, '还不赶快说些什么呀', _t('评论框内提示内容'), _t(''));
+    $form->addInput($commentCustom1);
+    $commentCustom2 = new \Typecho\Widget\Helper\Form\Element\Text('commentCustom2', NULL, '发送', _t('发送评论按钮文字'), _t(''));
+    $form->addInput($commentCustom2);
+	
     $optionHeader = new \Typecho\Widget\Helper\Form\Element\Textarea('optionHeader', NULL, NULL, _t('自定义Header'), _t('插入自定义Header内容，可用于引入其他资源等。拖动右下角小三角可以调整文本框大小'));
     $form->addInput($optionHeader);
     $optionFooter = new \Typecho\Widget\Helper\Form\Element\Textarea('optionFooter', NULL, NULL, _t('自定义Footer'), _t('插入自定义Footer内容，可用于放置统计代码等。拖动右下角小三角可以调整文本框大小'));
@@ -180,8 +179,6 @@ function themeConfig($form) {
     $form->addInput($myFooter);
 
 }
-
-
 
 // 获取浏览次数(by https://blog.iplayloli.com/4341.html)
 function getViewsStr($widget, $format = "{views}") {

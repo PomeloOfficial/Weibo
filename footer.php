@@ -2,6 +2,7 @@
     <div id="footer" class="site-footer">
       <div class="inner textcenter">
         <div class="copyright">
+		<!-- 尊重他人的劳动成果，请尽可能避免删除下列版权信息，谢谢！ -->
           <span>Copyright &copy; <?php $currentYear = intval(date('Y')); echo $currentYear; ?> <?php $this->options->title(); ?>. Powered by
             <a href="http://typecho.org/" title="Powered by Typecho)))" target="_blank">Typecho</a>. Theme By
             <a href="https://weibo.rowingbohe.com" title="Weibo" target="_blank">Weibo</a>. <?php $this->options->myFooter(); ?>
