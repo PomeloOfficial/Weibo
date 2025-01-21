@@ -45,7 +45,6 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha256-BYjRZhSY2ARUPcFTf5eEh3qWK58O88TM7nZet/JUNhE=" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css" integrity="sha256-TBe0l9PhFaVR3DwHmA2jQbUf1y6yQ22RBgJKKkNkC50=" crossorigin="anonymous">
 	
     <?php $this->header(); ?>
     <?php $this->options->optionHeader() ?>

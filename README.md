@@ -1,71 +1,53 @@
-声明：从V2.1开始，本主题的发布只在本论坛本贴进行，源码托管于Github-Rowingbohe-Weibo；V2.0之前的版本在薄荷小屋（blog.20d.win）和TE官方论坛发行过；其余网站注明了本贴链接和作者的转载，视为正规转载；其余地方转载未注明作者和本贴链接，视为非规范转载，均为盗版。请大家不要给盗版网站任何一点热度，谢谢。
+# Weibo
 
-声明：本主题原作在WordPress上运行，原作者[w候人兮猗](http://ahwgs.cn)，请原作者联系我处理这个主题的版权事宜，谢谢。
+> 微言大“艺”<br>The Art of Sublime Words
 
-声明：本主题完全开源，永久免费，若发现倒卖请向我举报，视线索重要程度可给予举报者论坛特殊待遇或红包奖励。被举报者一经查实，将会在本贴公布。
+一款适用于 [Typecho](https://typecho.org) 的仿新浪微博主题。
 
-————————正文分割线————————
+官方文档：[https://weibo.rowingbohe.com](https://weibo.rowingbohe.com)
 
-![screenshot.png](https://raw.githubusercontent.com/Rowingbohe/Weibo/master/screenshot.png)
+## 主题特点
 
-# Typecho 仿新浪微博主题 - Weibo
+* 高仿新浪微博经典版界面
+* 支持自适应
+* 个性化程度高
+* 可设置背景图、顶栏背景图
+* 可自定义导航栏、资料卡、关注按钮等
+* 文章大图多样化选择，支持随机图
+* 适配 Typecho 最新版本（1.2.1）与 PHP 8.0
+* 支持备份主题设置数据（测试）
 
-本主题原作者[w候人兮猗](http://ahwgs.cn)，由[阿珏(这个字念Jué)酱](https://www.52ecy.cn) & [Rowingbohe](https://blog.20d.win)移植入 Typecho。
+<img src="/screenshot.png" alt="主题截图">
 
-# 主题特点
- - 仿照新浪微博主页界面，适合微博控
+## 开箱即用
 
- - 可自定义昵称、头像、简介、认证信息等好多好多字段
+> 最新版本：<img src="https://img.shields.io/github/release/PomeloOfficial/Weibo.svg?style=flat-square">
 
- - 配合 [Links-for-Weibo](https://github.com/Rowingbohe/LInks-for-Weibo)插件可实现侧边栏友情链接
+从 GitHub Releases 上下载主题最新版本压缩包后，解压并将整个文件夹上传至你的博客的<code>/usr/themes</code>目录下（或者，上传压缩包后在你的服务器上解压），最后将文件夹改名为<code>Weibo</code>即可。
 
- - 滋磁自适应！！嵌套暂不支持，感谢谅解。
+上传完成后，在博客后台<code>控制台</code>-<code>外观</code>处启用主题，再点击<code>设置外观</code>即可进入主题设置页面。
 
-# 食用教程
- - 将本主题里的所有文件放在您网站目录的 usr/themes 内。
- - 下载安装上文提到的Links插件，并在后台的管理-友情链接内管理友情链接（如您没有这个必要可不装）
- - 进入外观启用本主题，并进入设置外观内填写信息
- - 如果首页文章长度和侧边栏显示长度不协调，可到您网站的 admin/options-reading.php 内修改"每页文章数目".
- - 转发本主题或为本主题写文章，请只转发本帖链接（这种情况下可不必联系我）；如需转发源码请email：admin at 20d dot win
- - 魔改本主题限个人使用，公开发布请注明原作者：Rowingbohe，及链接：https://forum.typecho.love/d/2
- - 如果你喜欢这个主题，请按一下 Star，给我一颗小星星~也可以打赏我哦：https://money.20d.win 支付宝2932213090@qq.com
+## 历史
 
-# 预览链接
-官方预览界面：https://weibo.20d.win/
+本主题由 <a href="https://rowingbohe.com" target="_blank">Pomelo</a>（原名 Rowingbohe）于 2018 年二次移植自 WordPress 主题（原作者为 <a href="https://www.ahwgs.cn" target="_blank">W候人兮猗</a>），因为历史比较久远，移植过程中的具体细节已经丢失。2025 年，对主题进行修复与完善。
 
-优秀使用者（想上榜可提交Issue 或发Email推荐）：
- - https://blog.20d.win 
+## 作者的话
 
-# 使用遇到问题？
- - 如果遇到bug或者使用遇到问题，欢迎提Issue，或者email我：admin at 20d dot win
+从十年前初入建站，八年前第一次安装 Typecho，七年前敲下第一行魔改代码，再到今天重走十年前的路，以往写下的文章、买下的域名，留到今天的少之又少，但这个技术含量不高的主题是我为数不多留下来、并且对大众有一点点用的产物。这次对原主题源码进行了说多不多、说少不少的改动，并且专门制作了文档页面（停放于 Netlify，只要域名一直续费，基本不会失效），主要还是回味以下以前绞尽脑汁做移植的过程。搞代码虽然让人头疼，但也使人感到快乐。改 bug 的过程中，我时常在想 N 年前的我是怎么整出这么 nb 的东西的 :joy: 
 
- - 欢迎各路大佬尽情提PR~
+希望改完之后的这套主题，能至少有一些可用性，也希望能为日渐式微的 Typecho 圈子乃至博客圈子发光发热。在此声明，本主题欢迎二开，欢迎 Issues 和 Pull Request，转载推荐需注明作者和本文档页链接。但不建议去除底部版权信息，禁止对外售卖。<s>当然，估计这么 fw 的东西也没人拿去卖罢...</s>
 
-# 感谢名单
- - 感谢阿珏大佬协助移植和开发手机版：https://blog.52ecy.cn/
- - 感谢爱萝莉的Ayan提供浏览统计：https://blog.iplayloli.com
- - 缩略图代码引用自抓住那只羊驼的主题：http://3gjn.com
- - 感谢 Css.loli.net 前端公共资源库提供 Jquery 加速。这个公共资源库速度超级快，东西超级多！实力安利：https://css.loli.net
- - 感谢 Typecho Lover QQ Group & Typecho Lover Forum 疯狂催更的每一位小伙伴！感谢你们对我的信任和支持！！这里特别感谢一下咱们的站长&群主 Yiveco 同志对我的滋磁鼓励信任！！！
- - 最后感谢每一个使用本主题、给了 Star、规范转载的你~
+那么，乙巳蛇年春节前夕，谨在此回应大家的等待：Weibo 主题打赢复活赛了！
 
-# 备忘录 - 下一步计划
- - 修复评论嵌套
+<img src="/womeiyijian.png" alt="孩子们，我回来了" width="100px">
 
-# 版本记录
-v1.0.0：内测版，70%功能实现
-v1.9.90：最后一个内测版
-V2.0.0（公测版）更新内容：
- - 侧边栏的三个数字改为文章、评论数、分类数
- - 可自定义顶部卡片背景链接
- - 修复了一堆bug
- - 完美嵌套评论
- - 修改readme.md
- - 首页增加页码、单条文章聚合增加分类和tags显示
- - 修复搜索功能问题
- - More...
+——<a href="https://rowingbohe.com" target="_blank">Pomelo</a> 2025-01-21 于浙江
 
-V2.5更新内容：
-终于滋磁手机版啦！感谢阿珏(这个字念Jué)酱(https://blog.52ecy.cn)提供的手机版css。
-终于有缩略图和阅读统计啦！感谢爱萝莉的Ayan(https://blog.iplayloli.com)提供的代码。
-这个嵌套评论贼鸡儿难搞，如果哪位大佬搞好了请跟我讲一下，爱你哟~谢谢茄子。
+## 致谢
+
+* 感谢原 WordPress 主题作者 <a href="https://www.ahwgs.cn" target="_blank">W候人兮猗</a>，感谢原网站源码制作者（暂时不明）。
+* 感谢阿珏博客（原链接已失效）协助开发自适应。
+* 感谢原 Typecho Lover 社区的支持。
+* 部分代码参考及移植自<a href="https://typecho.work" target="_blank">泽泽社长</a>、<a href="https://blog.iplayloli.com" target="_blank">Ryan's Blog</a> 及 <a href="https://typecho.work/archives/Kratos.html" target="_blank">Kratos 主题</a>。
+* 主题默认壁纸、随机图均为哔哩哔哩看板娘 22、33，取自 B 站[@壁纸娘](https://space.bilibili.com/6823116/dynamic)。
+* 最后感谢 <a href="https://typecho.org">Typecho</a> 这么一款优秀的博客引擎，承载了和我们一样无数人的梦想。
