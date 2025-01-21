@@ -7,10 +7,18 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
-    <title><?php $this->options->title(); ?><?php $this->archiveTitle(); ?></title>
+    <title>
+        <?php $this->archiveTitle([
+            'category' => _t('分类 %s 下的文章'),
+            'search' => _t('包含关键字 %s 的文章'),
+            'tag' => _t('标签 %s 下的文章'),
+            'author' => _t('%s 发布的文章')
+        ], '', ' - '); ?>
+		<?php $this->options->title(); ?>
+	</title>
  
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="<?php $this->options->faviconIUrl() ?>">
+    <link rel="icon shortcut" type="image/ico" href="<?php $this->options->faviconUrl() ?>">
     <link rel="icon" sizes="192x192" href="<?php $this->options->faviconUrl() ?>">
     <link rel="apple-touch-icon" href="<?php $this->options->faviconUrl() ?>">
 
@@ -79,7 +87,7 @@
           </div>
         </section>
         <!-- 导航结束 -->
-        <section class="banner bg" style="background-image: url(<?php ($this->options->cardBgUrl) ? $this->options->cardBgUrl() : $this->options->themeUrl('images/cardBg.png'); ?>)">
+        <section class="banner bg" style="background-image: url(<?php ($this->options->cardBgUrl) ? $this->options->cardBgUrl() : $this->options->themeUrl('images/cardBg.jpg'); ?>)">
           <div class="big-title">
             <a style="color:#fff;" href="<?php $this->options->siteUrl(); ?>">
               <h1 class="big-title-h1"><?php ($this->options->yourNickname) ? $this->options->yourNickname() : $this->options->title(); ?>

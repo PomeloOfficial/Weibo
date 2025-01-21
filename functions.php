@@ -109,12 +109,12 @@ function themeConfig($form) {
         '1', _t('注册按钮是否显示'), _t("用户未登录时在顶部导航栏展示“Sign up”按钮，可选择是否显示。如未启用注册功能，请选择“否”。")
     );
     $form->addInput($registerOpen);
-  
-    $faviconUrl = new \Typecho\Widget\Helper\Form\Element\Text('faviconUrl', NULL, NULL, _t('favicon.ico图标链接'), _t('它会显示在你的浏览器任务栏里'));
+
+    $faviconUrl = new \Typecho\Widget\Helper\Form\Element\Text('faviconUrl', NULL, NULL, _t('favicon.ico图标链接'), _t('它会显示在你的浏览器任务栏里；不填写则默认使用主题目录下images/favicon.ico，也可直接替换该文件'));
     $form->addInput($faviconUrl);
-    $bgUrl = new \Typecho\Widget\Helper\Form\Element\Text('bgUrl', NULL, NULL, _t('背景图片链接'), _t('在这里填入背景链接'));
+    $bgUrl = new \Typecho\Widget\Helper\Form\Element\Text('bgUrl', NULL, NULL, _t('背景图片链接'), _t('在这里填入背景图片链接；不填则使用主题目录下images/bg.jpg，也可直接替换该文件'));
     $form->addInput($bgUrl);
-    $cardBgUrl = new \Typecho\Widget\Helper\Form\Element\Text('cardBgUrl', NULL, NULL, _t('顶部卡片背景图片链接'), _t('在这里填入顶部卡片的背景链接；不填则使用主题目录下images/cardBg.png，也可直接替换该文件'));
+    $cardBgUrl = new \Typecho\Widget\Helper\Form\Element\Text('cardBgUrl', NULL, NULL, _t('顶部卡片背景图片链接'), _t('在这里填入顶部卡片的背景链接；不填则使用主题目录下images/cardBg.jpg，也可直接替换该文件'));
     $form->addInput($cardBgUrl);
 
     $commentCustom1 = new \Typecho\Widget\Helper\Form\Element\Text('commentCustom1', NULL, '还不赶快说些什么呀', _t('评论框内提示内容'), _t(''));
