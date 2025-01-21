@@ -72,14 +72,14 @@ function themeConfig($form) {
     };
     echo '<p style="font-size:14px;">
         <span style="display: block; margin-bottom: 10px; margin-top: 10px; font-size: 20px;">Weibo主题后台</span>
-        相关链接：<a href="https://github.com/PomeloOfficial/Weibo" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">GitHub仓库</a>&nbsp;<a href="https://weibo.rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">主题文档</a>&nbsp;<a href="https://blog.rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">作者博客</a>&nbsp;<a href="https://github.com/PomeloOfficial/Weibo/issues" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">提交反馈(GitHub Issues)</a><br>';
+        相关链接：<a href="https://github.com/PomeloOfficial/Weibo" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">GitHub仓库</a>&nbsp;<a href="https://weibo.rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">主题文档</a>&nbsp;<a href="https://rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">作者网站</a>&nbsp;<a href="https://github.com/PomeloOfficial/Weibo/issues" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">提交反馈(GitHub Issues)</a><br>';
     echo '当前版本：3.0 最新版本：<img src="https://img.shields.io/github/release/PomeloOfficial/Weibo.svg?style=flat-square"><br>';
     echo '
     <form class="protected home" action="?' . $name . 'bf" method="post">
     <input type="submit" name="type" class="btn btn-s" value="备份模板设置数据" />  <input type="submit" name="type" class="btn btn-s" value="还原模板设置数据" />  <input type="submit" name="type" class="btn btn-s" value="删除备份数据" /></form>';
     echo '</p>';
 
-    $headImgUrl = new \Typecho\Widget\Helper\Form\Element\Text('headImgUrl', NULL, 'https://q1.qlogo.cn/g?b=qq&nk=723326663&s=640', _t('头像地址'), _t('在这里填入头像的URL地址，它会显示在你的头部资料卡和每条微博前。默认使用QQ头像API（https://q1.qlogo.cn/g?b=qq&nk=QQ号&s=640），可将上方作者QQ号替换为你的QQ号；也可替换为其他图片链接'));
+    $headImgUrl = new \Typecho\Widget\Helper\Form\Element\Text('headImgUrl', NULL, 'https://q1.qlogo.cn/g?b=qq&nk=QQ号&s=640', _t('头像地址'), _t('在这里填入头像的URL地址，它会显示在你的头部资料卡和每条微博前。默认使用QQ头像API（https://q1.qlogo.cn/g?b=qq&nk=QQ号&s=640），可将上方作者QQ号替换为你的QQ号；也可替换为其他图片链接'));
     $form->addInput($headImgUrl);
     $faviconUrl = new \Typecho\Widget\Helper\Form\Element\Text('faviconUrl', NULL, NULL, _t('favicon.ico图标链接'), _t('它会显示在你的浏览器任务栏里；不填写则默认使用主题目录下images/favicon.ico，也可直接替换该文件'));
     $form->addInput($faviconUrl);

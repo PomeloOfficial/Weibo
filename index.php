@@ -1,6 +1,8 @@
 <?php
 /**
- * 心有猛虎，细嗅蔷薇
+ * 微言大“艺”
+ * The Art of Sublime Words
+ * 
  * 一款适用于Typecho的仿微博主题
  * 
  * @package Weibo
