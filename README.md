@@ -17,7 +17,7 @@
 * 适配 Typecho 最新版本（1.2.1）与 PHP 8.0
 * 支持备份主题设置数据（测试）
 
-<img src="/screenshot.png" alt="主题截图">
+<img src="https://weibo.rowingbohe.com/screenshot.png" alt="主题截图">
 
 ## 开箱即用
 
@@ -37,7 +37,7 @@
 
 希望改完之后的这套主题，能至少有一些可用性，也希望能为日渐式微的 Typecho 圈子乃至博客圈子发光发热。在此声明，本主题欢迎二开，欢迎 Issues 和 Pull Request，转载推荐需注明作者和本文档页链接。但不建议去除底部版权信息，禁止对外售卖。<s>当然，估计这么 fw 的东西也没人拿去卖罢...</s>
 
-那么，乙巳蛇年春节前夕，谨在此回应大家的等待：Weibo 主题打赢复活赛了！
+那么，乙巳蛇年春节前夕，谨在此回应大家的等待：Weibo 主题，打赢复活赛了！
 
 <img src="/womeiyijian.png" alt="孩子们，我回来了" width="100px">
 
