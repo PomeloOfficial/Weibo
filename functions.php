@@ -15,9 +15,9 @@ function themeConfig($form) {
             if ($db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:' . $name . 'bf'))) {
                 $update = $db->update('table.options')->rows(array('value' => $ysj))->where('name = ?', 'theme:' . $name . 'bf');
                 $updateRows = $db->query($update);
-                echo '<div class="tongzhi home">备份已更新，请等待自动刷新！如果等不到请点击';
+                echo '<div>备份已更新，请等待自动刷新，或';
 ?>
-                <a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div>
+                <a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">点击刷新</a></div>
                 <script language="JavaScript">
                     window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2500);
                 </script>
@@ -27,9 +27,9 @@ function themeConfig($form) {
                     $insert = $db->insert('table.options')
                         ->rows(array('name' => 'theme:' . $name . 'bf', 'user' => '0', 'value' => $ysj));
                     $insertId = $db->query($insert);
-                    echo '<div class="tongzhi home">备份完成，请等待自动刷新！如果等不到请点击';
+                    echo '<div>备份完成，请等待自动刷新，或';
                 ?>
-                    <a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div>
+                    <a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">点击刷新</a></div>
                     <script language="JavaScript">
                         window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2500);
                     </script>
@@ -43,22 +43,22 @@ function themeConfig($form) {
                 $bsj = $sjdub['value'];
                 $update = $db->update('table.options')->rows(array('value' => $bsj))->where('name = ?', 'theme:' . $name);
                 $updateRows = $db->query($update);
-                echo '<div class="tongzhi home">检测到模板备份数据，恢复完成，请等待自动刷新！如果等不到请点击';
+                echo '<div>检测到模板备份数据，恢复完成，请等待自动刷新，或';
                 ?>
-                <a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div>
+                <a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">点击刷新</a></div>
                 <script language="JavaScript">
                     window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2000);
                 </script>
             <?php
             } else {
-                echo '<div class="tongzhi home">没有模板备份数据，恢复不了哦！</div>';
+                echo '<div>没有模板备份数据，恢复不了哦！</div>';
             }
         }
         if ($_POST["type"] == "删除备份数据") {
             if ($db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:' . $name . 'bf'))) {
                 $delete = $db->delete('table.options')->where('name = ?', 'theme:' . $name . 'bf');
                 $deletedRows = $db->query($delete);
-                echo '<div class="tongzhi home">删除成功，请等待自动刷新，如果等不到请点击';
+                echo '<div>删除成功，请等待自动刷新，如果等不到请点击';
             ?>
                 <a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div>
                 <script language="JavaScript">
@@ -66,13 +66,13 @@ function themeConfig($form) {
                 </script>
 <?php
             } else {
-                echo '<div class="tongzhi home">不用删了！备份不存在！！！</div>';
+                echo '<div>当前不存在备份</div>';
             }
         }
     };
     echo '<p style="font-size:14px;">
         <span style="display: block; margin-bottom: 10px; margin-top: 10px; font-size: 20px;">Weibo主题后台</span>
-        相关链接：<a href="https://github.com/PomeloOfficial/Weibo" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">GitHub</a>&nbsp;<a href="https://weibo.rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">官方网站</a>&nbsp;<a href="https://blog.20d.win" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">作者博客</a>&nbsp;<a href="https://github.com/PomeloOfficial/Weibo/issues" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">提交反馈(GitHub Issues)</a><br>';
+        相关链接：<a href="https://github.com/PomeloOfficial/Weibo" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">GitHub仓库</a>&nbsp;<a href="https://weibo.rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">主题文档</a>&nbsp;<a href="https://blog.rowingbohe.com" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">作者博客</a>&nbsp;<a href="https://github.com/PomeloOfficial/Weibo/issues" target="_blank" style="color:#3384da;font-weight:bold;text-decoration:underline">提交反馈(GitHub Issues)</a><br>';
     echo '当前版本：3.0 最新版本：<img src="https://img.shields.io/github/release/PomeloOfficial/Weibo.svg?style=flat-square"><br>';
     echo '
     <form class="protected home" action="?' . $name . 'bf" method="post">

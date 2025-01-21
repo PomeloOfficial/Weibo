@@ -92,7 +92,7 @@
                 <!-- 友链结束 -->
                 </ul>
               </div>
-<?php endif; ?>
+            <?php endif; ?>
           </div>
         </aside>
         <!-- 侧边栏结束 -->
