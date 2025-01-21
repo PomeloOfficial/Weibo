@@ -18,14 +18,14 @@
 	</title>
  
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="<?php $this->options->faviconUrl() ?>">
-    <link rel="icon" sizes="192x192" href="<?php $this->options->faviconUrl() ?>">
-    <link rel="apple-touch-icon" href="<?php $this->options->faviconUrl() ?>">
-
+    <link rel="shortcut icon" type="image/ico" href="<?php ($this->options->faviconUrl) ? $this->options->faviconUrl() : $this->options->themeUrl('images/favicon.ico'); ?>">
+    <link rel="icon" sizes="192x192" href="<?php ($this->options->faviconUrl) ? $this->options->faviconUrl() : $this->options->themeUrl('images/favicon.ico'); ?>">
+    <link rel="apple-touch-icon" href="<?php ($this->options->faviconUrl) ? $this->options->faviconUrl() : $this->options->themeUrl('images/favicon.ico'); ?>">
+	
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="<?php $this->options->title(); ?>">
     <meta name="twitter:description" content="<?php $this->options->description() ?>">
-    <meta name="twitter:image" content="<?php $this->options->faviconUrl() ?>">
+    <meta name="twitter:image" content="<?php ($this->options->faviconUrl) ? $this->options->faviconUrl() : $this->options->themeUrl('images/favicon.ico'); ?>">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="<?php $this->permalink(); ?>" />
 
@@ -95,7 +95,7 @@
                 <i class="vip_lev" style="background-image:url(<?php $this->options->themeUrl('images/icon.png'); ?>);background-position: -25px -125px;"></i>
               </h1>
             </a>
-            <h3 class="big-title-h3 tips-top" aria-label="<?php ($this->options->yourNickname) ? $this->options->yourDescription() : $this->options->description(); ?>"><?php ($this->options->yourNickname) ? $this->options->yourDescription() : $this->options->description(); ?>
+            <h3 class="big-title-h3 tips-top" aria-label="<?php ($this->options->yourDescription) ? $this->options->yourDescription() : $this->options->description(); ?>"><?php ($this->options->yourDescription) ? $this->options->yourDescription() : $this->options->description(); ?>
               <br></h3>
           </div>
 
